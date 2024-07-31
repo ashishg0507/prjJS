@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        h1{
+            font-size: 50px;
+            font-family: cursive;
+            color: rgba(175, 89, 8, 0.508);
+        }
+        body {
+            font-family: cursive;
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 3px solid #00000000;
+            border-radius: 15px;
+            
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #553700;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>Log In</h1>
+    <form onsubmit="checkpass()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Log In">
+
+        <script>
+            function checkpass() {
+
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const correctPassword = 'Ashish'; 
+
+            if (password === correctPassword) {
+                alert('Welcome!');
+            } else {
+                alert('Wrong password');
+            }
+        }
+        </script>
+    
+</body>
+</html>

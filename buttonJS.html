@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" href></script>
+</head>
+<body>
+    <h2>Click on the button below.</h2>
+    <button id="clickhere">Click Here</button>
+
+<script>
+  const clickhere = document.getElementById('clickhere');
+
+  clickhere.addEventListener('click', () => {
+    const Address = prompt("Enter your address:");
+    const states = ["Haryana", "Punjab", "Chandigarh"];
+
+    if (states.includes(Address)) {
+      window.location.href = "/page2.html";
+    } else {
+      alert("Access Denied!");
+    }
+  });
+</script>
+    
+</body>
+</html>
